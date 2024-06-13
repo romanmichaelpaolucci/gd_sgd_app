@@ -54,21 +54,6 @@ def plot_3d_surface(func, path, title):
 
 st.title("Convex and Non-Convex Optimization Problems")
 
-st.sidebar.markdown("""
-### Further Reading
-[Author: Roman Paolucci](https://romanmichaelpaolucci.github.io).
-""")
-
-st.sidebar.markdown("""
-### Role of Optimization in Deep Learning and AI
-Minimization is the backbone of deep learning and artificial intelligence. Most of the time, we have a specific goal (even if it is hard to define), and our model makes predictions toward that goal using some weights. We want these weights to get better and better at achieving the goal. This process involves defining a loss function that measures the discrepancy between the model's predictions and the actual outcomes. By minimizing this loss function, we can optimize the model's weights to improve its performance. In the following interactive app x and y act as our "weights" and z acts as our loss function. In other words, we want to find the best x and y to create the lowest z.
-""")
-
-st.sidebar.markdown("""
-### Why Consider Non-Convex Optimization Problems?
-Non-convex optimization problems are common in deep learning due to the high-dimensional and complex nature of neural network architectures. The loss functions of neural networks often have many local minima, saddle points, and complex landscapes. Stochastic gradient descent (SGD) helps in navigating these landscapes by providing a method that can escape local minima and potentially find better solutions by leveraging its stochastic nature. Understanding and visualizing these optimization paths are crucial for developing effective deep learning models.
-""")
-
 tab1, tab2 = st.tabs(["Gradient Descent", "Stochastic Gradient Descent"])
 
 st.sidebar.header("Parameters")
@@ -82,6 +67,21 @@ non_convex_start_y = st.sidebar.slider("Non-Convex Start Y", -3.0, 3.0, 2.5)
 
 convex_start = np.array([convex_start_x, convex_start_y])
 non_convex_start = np.array([non_convex_start_x, non_convex_start_y])
+
+st.sidebar.markdown("""
+### Author and Further Reading
+[Author: Roman Paolucci](https://romanmichaelpaolucci.github.io).
+""")
+
+st.sidebar.markdown("""
+### Role of Optimization in Deep Learning and AI
+Minimization is the backbone of deep learning and artificial intelligence. Most of the time, we have a specific goal (even if it is hard to define), and our model makes predictions toward that goal using some weights. We want these weights to get better and better at achieving the goal. This process involves defining a loss function that measures the discrepancy between the model's predictions and the actual outcomes. By minimizing this loss function, we can optimize the model's weights to improve its performance. In the following interactive app x and y act as our "weights" and z acts as our loss function. In other words, we want to find the best x and y to create the lowest z.
+""")
+
+st.sidebar.markdown("""
+### Why Consider Non-Convex Optimization Problems?
+Non-convex optimization problems are common in deep learning due to the high-dimensional and complex nature of neural network architectures. The loss functions of neural networks often have many local minima, saddle points, and complex landscapes. Stochastic gradient descent (SGD) helps in navigating these landscapes by providing a method that can escape local minima and potentially find better solutions by leveraging its stochastic nature. Understanding and visualizing these optimization paths are crucial for developing effective deep learning models.
+""")
 
 with tab1:
     st.header("Gradient Descent")
