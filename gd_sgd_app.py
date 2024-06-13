@@ -55,6 +55,11 @@ def plot_3d_surface(func, path, title):
 st.title("Convex and Non-Convex Optimization Problems")
 
 st.sidebar.markdown("""
+### Further Reading
+[Author: Roman Paolucci](https://romanmichaelpaolucci.github.io).
+""")
+
+st.sidebar.markdown("""
 ### Role of Optimization in Deep Learning and AI
 Minimization is the backbone of deep learning and artificial intelligence. Most of the time, we have a specific goal (even if it is hard to define), and our model makes predictions toward that goal using some weights. We want these weights to get better and better at achieving the goal. This process involves defining a loss function that measures the discrepancy between the model's predictions and the actual outcomes. By minimizing this loss function, we can optimize the model's weights to improve its performance. In the following interactive app x and y act as our "weights" and z acts as our loss function. In other words, we want to find the best x and y to create the lowest z.
 """)
